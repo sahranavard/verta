@@ -38,6 +38,9 @@ hekmatinasser/verta
     'Verta' => Hekmatinasser\Verta\Verta::class,
 ]
 ```
+
+برای تعیین timezone به صورت پیشفرض، کد زیر باید به فایل env اضافه شود
+
 <a name="basic-usage"></a>
 ## نحوه استفاده 
 
