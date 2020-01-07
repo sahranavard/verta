@@ -27,6 +27,8 @@ class VertaServiceProvider extends ServiceProvider
         $this->app->bind('verta', function ($app) {
             return new Verta;
         });
+        
+        $this->mergeConfigFrom(__DIR__.'/config/verta.php','verta');
     }
 
     
