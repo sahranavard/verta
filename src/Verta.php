@@ -265,7 +265,8 @@ class Verta extends DateTime {
 		else {
 	        throw new \InvalidArgumentException(sprintf("Unknown datetime '%s'", $datetime));
 		}
-
+        if (is_null($timezone))
+            $timezone = config('verta.current_timezone');
         $timezone = static::createTimeZone($timezone);
 		parent::__construct(date('Y-m-d H:i:s.u', $instance), $timezone);
 	}
